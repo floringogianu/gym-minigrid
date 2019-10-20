@@ -95,6 +95,14 @@ class OverEstimationRandomEnv9x9(OverEstimationEnv):
     def __init__(self):
         super().__init__(size=9, agent_start_pos=None)
 
+class OverEstimationEnv11x11(OverEstimationEnv):
+    def __init__(self):
+        super().__init__(size=11)
+
+class OverEstimationRandomEnv11x11(OverEstimationEnv):
+    def __init__(self):
+        super().__init__(size=11, agent_start_pos=None)
+
 register(
     id='MiniGrid-OverEstimation-5x5-v0',
     entry_point='gym_minigrid.envs:OverEstimationEnv5x5'
@@ -113,4 +121,14 @@ register(
 register(
     id='MiniGrid-OverEstimation-Random-9x9-v0',
     entry_point='gym_minigrid.envs:OverEstimationRandomEnv9x9'
+)
+
+register(
+    id='MiniGrid-OverEstimation-11x11-v0',
+    entry_point='gym_minigrid.envs:OverEstimationEnv11x11'
+)
+
+register(
+    id='MiniGrid-OverEstimation-Random-11x11-v0',
+    entry_point='gym_minigrid.envs:OverEstimationRandomEnv11x11'
 )
