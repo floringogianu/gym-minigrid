@@ -130,6 +130,10 @@ class SimpleCrossingS9N3Env(CrossingEnv):
     def __init__(self):
         super().__init__(size=9, num_crossings=3, obstacle_type=Wall)
 
+class SimpleCrossingS11N1Env(CrossingEnv):
+    def __init__(self):
+        super().__init__(size=11, num_crossings=1, obstacle_type=Wall)
+
 class SimpleCrossingS11N5Env(CrossingEnv):
     def __init__(self):
         super().__init__(size=11, num_crossings=5, obstacle_type=Wall)
@@ -147,6 +151,11 @@ register(
 register(
     id='MiniGrid-SimpleCrossingS9N3-v0',
     entry_point='gym_minigrid.envs:SimpleCrossingS9N3Env'
+)
+
+register(
+    id='MiniGrid-SimpleCrossingS11N1-v0',
+    entry_point='gym_minigrid.envs:SimpleCrossingS11N1Env'
 )
 
 register(
